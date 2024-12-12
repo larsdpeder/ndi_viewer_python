@@ -15,16 +15,24 @@ A lightweight and stable NDI viewer application for macOS that allows you to vie
 
 - macOS
 - Python 3.12 or later
-- NDI SDK for macOS (included)
+- NDI Video Monitor app (for NDI library)
 
 ## Installation
 
-1. Install the required Python packages:
+1. Install NDI Video Monitor:
+   - Download NDI Video Monitor from https://ndi.video/tools/ndi-video-monitor/
+   - Install the application
+
+2. Get the NDI library:
+   - Right-click on NDI Video Monitor in Applications
+   - Select "Show Package Contents"
+   - Navigate to `Contents/Frameworks/`
+   - Copy `libndi_advanced.dylib` to the ndi_viewer directory
+
+3. Install the required Python packages:
 ```bash
 pip install -r requirements.txt
 ```
-
-2. The NDI library (`libndi_advanced.dylib`) is included in the repository.
 
 ## Usage
 
@@ -53,15 +61,17 @@ If you experience issues:
 1. Check the `ndi_viewer.log` file for error messages
 2. Ensure NDI sources are running on your network
 3. Try disconnecting and reconnecting to the source
-4. Restart the application if needed
+4. If you get "NDI Library Not Found" error:
+   - Verify NDI Video Monitor is installed
+   - Check that `libndi_advanced.dylib` is in the correct location
+   - Make sure the file permissions allow read access
 
 ## Files
 
 - `ndi_viewer.py` - Main application
-- `libndi_advanced.dylib` - NDI library for macOS
 - `requirements.txt` - Python dependencies
 - `ndi_viewer.log` - Application log file
 
 ## License
 
-This project uses the NDI SDK, which is subject to the NDI SDK License Agreement.
+This project uses the NDI SDK, which is subject to the NDI SDK License Agreement. NDI® is a registered trademark of Vizrt Group.
