@@ -1,6 +1,6 @@
 
 ![Screenshot 2024-12-12 at 12 23 39 PM](https://github.com/user-attachments/assets/998b4a7b-4f78-46bc-945d-76a06377ce82)
-
+Note: Source window is censored in this image.
 
 # NDI Viewer
 
